@@ -23,10 +23,10 @@ HOW TO INVOKE THE MVC APPLICATION
 
 This project requires:
 
-Java 8 or higher
-Eclipse
-Tomcat 9 or higher
-mysql server v. 5.7
+Java 8 or higher,
+Eclipse,
+Tomcat 9 or higher,
+mysql server v. 5.7,
 mysql workbench v. 5.7 or higher
 
 1. Make sure that the project has the following files: 
@@ -60,12 +60,12 @@ HOW TO INVOKE REST API APPLICATION
 
 This project requires:
 
-Java 8 or higher
-JAVASE -11 in Eclipse(for deployment purpose)
-Eclipse
-Tomcat 9 or higher
-mysql server v. 5.7
-mysql workbench v. 5.7 or higher
+Java 8 or higher,
+JAVASE -11 in Eclipse(for deployment purpose),
+Eclipse,
+Tomcat 9 or higher,
+mysql server v. 5.7,
+mysql workbench v. 5.7 or higher,
 
 1. Make sure that the project has the following files: 
    - in the controllers package there should be one api servlets named ApisFilm and ResponseUtils.
