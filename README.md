@@ -1,6 +1,6 @@
 MVC AND RESTAPI PROJECT INSTRUCTIONS
 
-Both prjects were created to test out understanding of building MVC Pattern design web application and Restful web services by creating a CRUD film collection database.
+Both projects were created to test out understanding of building MVC Pattern design web application and Restful web services by creating a CRUD film collection database.
 At the time of writing, both projects are at their finishing stage however room for improvement in terms of additional functionalities and design is potentially expected.
 
 MVC PROJECT
