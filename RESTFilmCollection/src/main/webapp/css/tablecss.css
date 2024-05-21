@@ -1,0 +1,84 @@
+/*body {
+  min-height: 100vh;
+
+  background-color: #5E4865;
+  background-image: linear-gradient(147deg, #5E4865 0%, #5E4865 100%);
+}*/
+
+/* Table Styling */
+.card {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+.table {
+    border: none; /* Remove default border */
+}
+.table th,
+.table td {
+    padding: 12px 15px; /* Increase padding for better readability */
+}
+.table thead th {
+    background-color: #f8f9fa; /* Add background color to table header */
+}
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px; /* Increase spacing between form elements */
+}
+.form-control {
+    font-size: 16px; /* Set consistent font size */
+    border-radius: 5px; /* Apply rounded corners to form inputs */
+}
+/* Button Styling */
+.btn {
+    font-size: 16px; /* Set consistent font size */
+    border-radius: 5px; /* Apply rounded corners to buttons */
+}
+.btn-success {
+    padding: 10px 15px; /* Increase padding for primary action buttons */
+}
+.btn-primary:hover,
+.btn-danger:hover,
+.btn-info:hover {
+    opacity: 0.8; /* Add hover effect */
+}
+/* Hover effect for table rows */
+  table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Alternate row colors */
+  table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  /* Style for the "Add Film" button */
+  #addFilmButton {
+    border: none;
+    background-color: rgb(0, 147, 147); /* Green color */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+
+  #addFilmButton:hover {
+    background-color: rgb(0, 128, 128); /* Darker green color on hover */
+  }
+
+  /* Center align the table */
+  .table-responsive {
+    margin: 0 auto;
+  }
+      /* Custom button styles */
+    .btn {
+        border-radius: 70px; /* Adjust the border radius to make the buttons softer */
+        transition: background-color 0.3s ease; /* Smooth transition for color change */
+    }
+
+    /* Change button color on hover */
+    .btn:hover {
+        background-color: #e0e0e0; /* Change the background color on hover */
+        color: #333; /* Change text color on hover */
+    }
+     /* Custom CSS for modal header */
+    .custom-modal-header {
+        background-color: #5aded3; /*  */
+        color: #000000; /* Text color */
+    }

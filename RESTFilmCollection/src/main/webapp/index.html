@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Film Collection Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/tablecss.css" type="text/css" />
+    <style>
+        /* Add background image */
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/000/539/615/original/seamless-pattern-of-colorful-geometric-shapes-vector-illustration.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 60px 0; /*Adjust padding*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid py-5">
+        <div class="row py-5">
+            <div class="col-lg-10 mx-auto">
+                <div class="card rounded shadow border-0">
+                    <div class="card-body p-5 bg-white rounded">
+                        <div class="table-wrapper">
+                            <div class="table-title">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h2>Film Collection</h2>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                        <button id="addFilmButton" class="btn btn-success" data-toggle="modal" data-target="#addFilmModal">Add Film</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group float-left mb-3">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group float-left" style="width: 20%;">
+                                <label for="dataFormatSelect">Choose Data Type:</label>
+                                <select class="form-control" id="dataFormatSelect" onchange="changeDataFormat()">
+                                    <option value="text">Text</option>
+                                    <option value="json">JSON</option>
+                                    <option value="xml">XML</option>
+                                </select>
+                            </div>
+                            <!-- Search Input -->
+                                <div class="form-group float-right" style="width: 20%; height: 70px;">
+                                <div class= "container">
+                                    <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="filmTable" data-toggle="table" data-search="true" data-pagination="true" data-page-size="5" class="table table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Title</th>
+                                            <th>Year</th>
+                                            <th>Director</th>
+                                            <th>Stars</th>
+                                            <th>Review</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="filmTableBody">
+                                        <!-- Table data will be inserted here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Add Film Modal -->
+    <div class="modal fade" id="addFilmModal" tabindex="-1" role="dialog" aria-labelledby="addFilmModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header custom-modal-header">
+                    <h5 class="modal-title" id="addFilmModalLabel">Add Film</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for adding films goes here -->
+                    <form id="addFilmForm">
+                        <div class="form-group">
+                            <label for="id">ID</label>
+                            <input type="number" class="form-control" id="id" name="id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" id="title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="number" class="form-control" id="year" name="year" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="director">Director</label>
+                            <input type="text" class="form-control" id="director" name="director" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="stars">Stars</label>
+                            <input type="text" class="form-control" id="stars" name="stars" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="review">Review</label>
+                            <textarea class="form-control" id="review" name="review" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Update Film Modal -->
+    <div class="modal fade" id="editFilmModal" tabindex="-1" role="dialog" aria-labelledby="editFilmModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editFilmModalLabel">Edit Film Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editFilmForm">
+                        <div class="form-group">
+                            <label for="editId">ID</label>
+                            <input type="number" class="form-control" id="editFilmId" name="id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editTitle">Title</label>
+                            <input type="text" class="form-control" id="editTitle" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editYear">Year</label>
+                            <input type="number" class="form-control" id="editYear" name="year" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editDirector">Director</label>
+                            <input type="text" class="form-control" id="editDirector" name="director" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editStars">Stars</label>
+                            <input type="text" class="form-control" id="editStars" name="stars" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editReview">Review</label>
+                            <textarea class="form-control" id="editReview" name="review" rows="3"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="submitEditFilm()">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="./scripts/ajaxHandler.js"></script>
+    <script src="./scripts/dataHandler.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
