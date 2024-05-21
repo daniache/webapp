@@ -53,7 +53,7 @@ Technologies used:
 
  - Frameworks and Libraries: jQuery, Bootstrap, mysql.jar, jstl 1-2.jar, jaxb and gson.
  - Languages: Java, Javascript/jQuery, HTML, CSS.
- - API:  AJAX xMLHTPPOBJECT
+ - API:  XMLHttpRequest (XHR)(ajax)
  - Restful APi servlet with doGET, doPost, doPut and doDelete
 
 HOW TO INVOKE REST API APPLICATION
