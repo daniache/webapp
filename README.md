@@ -40,7 +40,8 @@ mysql workbench v. 5.7 or higher
 
 
 
-RESTAPI PROJECT
+RESTAPI PROJECT 
+![Film Collection REST API v](https://github.com/user-attachments/assets/9fa15957-7aa4-4f35-8fbc-5e2682dd6c09)
 
 Functionalities:
 - It adds Film details in the database
