@@ -4,6 +4,7 @@ Both projects were created to consolidate the understanding of building MVC Patt
 At the time of writing, both projects are at their finishing stage however room for improvement in terms of additional functionalities and design is potentially expected.
 
 MVC PROJECT
+
 ![film collection MVC(https://github.com/user-attachments/assets/8a21cc86-e54e-4c18-bc88-0457ea6b4a28)
 
 Functionalities:
