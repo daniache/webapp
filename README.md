@@ -5,7 +5,7 @@ At the time of writing, both projects are at their finishing stage however room 
 
 MVC PROJECT
 
-![film collection MVC(https://github.com/user-attachments/assets/8a21cc86-e54e-4c18-bc88-0457ea6b4a28)
+[![film collection MVC(https://github.com/user-attachments/assets/8a21cc86-e54e-4c18-bc88-0457ea6b4a28)](https://github.com/daniache/webapp/issues/2#issue-2612681848)
 
 Functionalities:
 - It adds Film details in the database
