@@ -77,3 +77,6 @@ mysql workbench v. 5.7 or higher,
    
    
 2. To run the application, right-click on "index.html" and running it using Tomcat and on port 8080
+
+NB. If you would like to see the cloud implementation of the project, I have uploaded a file named "Cloud Implementation" that show the entire process.
+
