@@ -15,7 +15,7 @@ Functionalities:
 
 Technologies used:
 
- - Frameworks and Libraries: jQuery, Bootstrap, mysql.jar, jstl 1-2.jar
+ - Frameworks and Libraries: jQuery, Bootstrap, mysql.jar, jakarta.servlet.jsp.jstl-3.0.1.jar and jakarta.servlet.jsp.api-3.02.jar
  - Languages: Java, Javascript/jQuery
  - Https Servlets
  - Java Web Pages(JSP)
@@ -24,18 +24,19 @@ HOW TO INVOKE THE MVC APPLICATION
 
 This project requires:
 
-Java 8 or higher,
+Java 21 or higher,
+JAVASE -17
 Eclipse,
-Tomcat 9 or higher,
-mysql server v. 5.7,
-mysql workbench v. 5.7 or higher
+Tomcat 10.1 or higher,
+mysql server v. 8.0.x,
+mysql workbench v. 8 or higher
 
 1. Make sure that the project has the following files: 
    - in the controller package there should be five servlets: FilmAdd,-Delete,-List,-Retrive-Update Servlet
    - in the database package the FILMDAO class
    - in the model package the Film class
    - under webapp four jsp file named film-add-details-list-update.
-   - under webapp/webinf, a lib folder with two lib mysql.jar and jstl-1.2.jar 
+   - under webapp/webinf, a lib folder with three library files mysql.jar, jakarta.servlet.jsp.jstl-3.0.1.jar and jakarta.servlet.jsp.api-3.02.jar
    
 2. To run the application, right-click on FilmListServlet and running it using Tomcat and on port 8080
 
@@ -53,7 +54,7 @@ Functionalities:
 
 Technologies used:
 
- - Frameworks and Libraries: jQuery, Bootstrap, mysql.jar, jstl 1-2.jar, jaxb and gson.
+ - Frameworks and Libraries: jQuery, Bootstrap, mysql.jar, jakarta.servlet.jsp.jstl-3.0.1.jar and jakarta.servlet.jsp.api-3.02.jar, jaxb and gson.
  - Languages: Java, Javascript/jQuery, HTML, CSS.
  - API:  XMLHttpRequest (XHR)(ajax)
  - Restful APi servlet with doGET, doPost, doPut and doDelete
@@ -62,12 +63,12 @@ HOW TO INVOKE REST API APPLICATION
 
 This project requires:
 
-Java 8 or higher,
-JAVASE -11 in Eclipse(for deployment purpose),
+Java 21 or higher,
+JAVASE -21 in Eclipse(for deployment purpose),
 Eclipse,
-Tomcat 9 or higher,
-mysql server v. 5.7,
-mysql workbench v. 5.7 or higher,
+Tomcat 10.1 or higher,
+mysql server v. 8.0.x,
+mysql workbench v. 8 or higher,
 
 1. Make sure that the project has the following files: 
    - in the controllers package there should be one api servlets named ApisFilm and ResponseUtils.
